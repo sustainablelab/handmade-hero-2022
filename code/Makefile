@@ -7,7 +7,7 @@
 # /Od -- disable optimization
 CFLAGS = /Zi
 # IMPORTLIBS = user32.lib gdi32.lib
-IMPORTLIBS =
+IMPORTLIBS = user32.lib
 
 .PHONY: ..\build\win32_handmade.exe
 ..\build\win32_handmade.exe: win32_handmade.cpp

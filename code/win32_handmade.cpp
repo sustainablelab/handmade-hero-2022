@@ -7,6 +7,13 @@ int CALLBACK WinMain(
         int cmdshow             // Controls how the window is shown
         )
 {
+    MessageBox(
+        0,                          // HWND hWnd,
+        "Bob.",                     // LPCTSTR lpText,
+        "bob",                      // LPCTSTR lpCaption,
+        MB_OK|MB_ICONINFORMATION    // UINT uType
+        );
+
     return 0;
 }
 
