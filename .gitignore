@@ -1,0 +1,11 @@
+# Output from MSVC tools and VisualStudio
+*.exe
+*.obj
+*.ilk
+*.pdb
+*.sln
+.dropbox.device*
+.vs/
+
+# Files I make that I don't want Git to track
+lib-tags
