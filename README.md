@@ -18,3 +18,5 @@ Windows.
 
 - [Day 1](doc/day001.md) - setup to build with MSVC toolchain and
   to use VisualStudio as my debugger
+
+- [Day 2](doc/day002.md)

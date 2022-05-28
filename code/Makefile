@@ -6,13 +6,15 @@
 # /c  -- compile without linking
 # /Od -- disable optimization
 CFLAGS = /Zi
-# IMPORTLIBS = user32.lib gdi32.lib
-IMPORTLIBS = user32.lib
+IMPORTLIBS = user32.lib gdi32.lib
 
 .PHONY: ..\build\win32_handmade.exe
 ..\build\win32_handmade.exe: win32_handmade.cpp
 	cl.exe $(CFLAGS) $(IMPORTLIBS) $< /Fe"$@"
 
+.PHONY: tags
+tags: win32_handmade.cpp
+	ctags --c-kinds=+l --exclude=Makefile -R .
 
 .PHONY: lib-tags
 lib-tags: win32_handmade.cpp
@@ -26,3 +28,10 @@ lib-tags: win32_handmade.cpp
 .PHONY: clean
 clean:
 	rm -f ../build/*.exe ../build/*.obj ../build/*.pdb ../build/*.ilk
+
+.PHONY: struct
+struct: ..\temp\struct.exe
+
+..\temp\struct.exe: struct.c
+	cl.exe $(CFLAGS) $< /Fe"$@"
+
